@@ -49,10 +49,14 @@ class LoginPage {
   }
   /**
    * @method visitLoginPage
-   * @description Navigate to login page
+   * @description Navigate to login page and clear session storage
    */
   visitLoginPage() {
-    cy.visit('/');
+    cy.visit('/', {
+      onBeforeLoad: (win) => {
+        win.sessionStorage.clear();
+      },
+    });
   }
   /**
    * @method loginUser

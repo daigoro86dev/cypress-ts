@@ -1,0 +1,57 @@
+// Inventory Item Page Object Model
+
+/// <reference types="cypress" />
+
+import User from './User';
+
+class CheckoutPage {
+  /**
+   * @method getCheckoutButton
+   */
+  getCheckoutButton() {
+    return cy.get('.btn_action.checkout_button');
+  }
+  /**
+   * @method getFirstNameInput
+   */
+  getFirstNameInput() {
+    return cy.get('#first-name');
+  }
+  /**
+   * @method getLastNameInput
+   */
+  getLastNameInput() {
+    return cy.get('#last-name');
+  }
+  /**
+   * @method getFirstNameInput
+   */
+  getPostalCodeInput() {
+    return cy.get('#postal-code');
+  }
+  /**
+   * @method getCancelCheckoutButton
+   */
+  getCancelCheckoutButton() {
+    return cy.get('.cart_cancel_link.btn_secondary');
+  }
+  /**
+   * @method getContinueCheckoutButton
+   */
+  getContinueCheckoutButton() {
+    return cy.get('.btn_primary.cart_button');
+  }
+  /**
+   * @method fillCheckoutInformation
+   * @param firstName
+   * @param lastName
+   * @param postalCode
+   */
+  fillCheckoutInformation() {
+    this.getFirstNameInput().type(User.getFirstName());
+    this.getLastNameInput().type(User.getLastName());
+    this.getPostalCodeInput().type(User.getPostalCode());
+  }
+}
+
+export default new CheckoutPage();
