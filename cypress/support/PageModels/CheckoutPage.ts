@@ -1,4 +1,4 @@
-// Inventory Item Page Object Model
+// Checkout Page Object Model
 
 /// <reference types="cypress" />
 
@@ -40,6 +40,18 @@ class CheckoutPage {
    */
   getContinueCheckoutButton() {
     return cy.get('.btn_primary.cart_button');
+  }
+  /**
+   * @method getFinishCheckoutButton
+   */
+  getFinishCheckoutButton() {
+    return cy.get('.btn_action.cart_button');
+  }
+  /**
+   * @method getCompleteCheckoutHeader
+   */
+  getCompleteCheckoutHeader() {
+    return cy.get('h2.complete-header');
   }
   /**
    * @method fillCheckoutInformation

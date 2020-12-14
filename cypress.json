@@ -1,6 +1,7 @@
 {
   "baseUrl": "https://www.saucedemo.com",
   "watchForFileChanges": false,
+  "numTestsKeptInMemory": 0,
   "video": false,
   "screenshotOnRunFailure": false
 }

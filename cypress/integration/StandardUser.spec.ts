@@ -20,10 +20,16 @@ describe('standard_user test', () => {
     InventoryItemPage.getAddToCartButton().click();
     expect(InventoryItemPage.getRemoveFromCartButton()).exist;
   });
-  it('Goes to checkout and confirm product selection', () => {
+  it('Goes to checkout and completes it', () => {
     NavigationBar.getNavbarCartLink().click();
     CheckoutPage.getCheckoutButton().click();
     CheckoutPage.fillCheckoutInformation();
     CheckoutPage.getContinueCheckoutButton().click();
+    CheckoutPage.getFinishCheckoutButton().click();
+    expect(
+      CheckoutPage.getCompleteCheckoutHeader().contains(
+        'THANK YOU FOR YOUR ORDER'
+      )
+    ).exist;
   });
 });
