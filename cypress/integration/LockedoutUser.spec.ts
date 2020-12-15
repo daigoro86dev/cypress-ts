@@ -11,6 +11,10 @@ describe('locked_out_user test', () => {
       LoginPage.getErrorMessage().contains(
         'Epic sadface: Sorry, this user has been locked out.'
       )
-    );
+    ).exist;
+  });
+  it('Clears error message', () => {
+    LoginPage.getErrorMsgButton().click();
+    LoginPage.getErrorMessage().should('not.be.exist');
   });
 });

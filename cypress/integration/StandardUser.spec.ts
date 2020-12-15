@@ -10,6 +10,9 @@ describe('standard_user test', () => {
     LoginPage.getLoginPageTitle().should('eq', 'Swag Labs');
     LoginPage.loginUser('standard_user');
   });
+  it('Checks is all product images are loaded', () => {
+    InventoryPage.getAllInventoryImages();
+  });
   it('Selects an item and adds to cart', () => {
     InventoryPage.getItemByName('Sauce Labs Backpack').click();
     expect(

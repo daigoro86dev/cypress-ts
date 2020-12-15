@@ -1,6 +1,7 @@
 // Inventory Page Object Model
 
 /// <reference types="cypress" />
+/// <reference types="../" />
 
 class InventoryPage {
   /**
@@ -16,6 +17,14 @@ class InventoryPage {
    */
   getItemById(itemId: number) {
     return cy.get(`#item_${itemId}_title_link`);
+  }
+  /**
+   * @method getAllInventoryImages
+   */
+  getAllInventoryImages() {
+    cy.get('img.inventory_item_img').then((img) => {
+      cy.fetchImage(img);
+    });
   }
 }
 

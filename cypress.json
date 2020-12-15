@@ -3,5 +3,7 @@
   "watchForFileChanges": false,
   "numTestsKeptInMemory": 0,
   "video": false,
-  "screenshotOnRunFailure": false
+  "screenshotOnRunFailure": false,
+  "pluginsFile": "cypress/plugins/index.ts",
+  "supportFile": "cypress/support/index.ts"
 }
