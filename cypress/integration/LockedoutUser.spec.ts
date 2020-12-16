@@ -14,7 +14,7 @@ describe('locked_out_user test', () => {
     ).exist;
   });
   it('Clears error message', () => {
-    LoginPage.getErrorMsgButton().click();
+    LoginPage.dismissErrorMessage();
     LoginPage.getErrorMessage().should('not.be.exist');
   });
 });

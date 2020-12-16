@@ -14,21 +14,21 @@ describe('standard_user test', () => {
     InventoryPage.getAllInventoryImages();
   });
   it('Selects an item and adds to cart', () => {
-    InventoryPage.getItemByName('Sauce Labs Backpack').click();
+    InventoryPage.selectItemByName('Sauce Labs Backpack');
     expect(
       InventoryItemPage.getInventoryDetailsName().contains(
         'Sauce Labs Backpack'
       )
     ).exist;
-    InventoryItemPage.getAddToCartButton().click();
+    InventoryItemPage.addItemToCart();
     expect(InventoryItemPage.getRemoveFromCartButton()).exist;
   });
   it('Goes to checkout and completes it', () => {
-    NavigationBar.getNavbarCartLink().click();
-    CheckoutPage.getCheckoutButton().click();
+    NavigationBar.navigateToCheckout();
+    CheckoutPage.clickCheckoutButton();
     CheckoutPage.fillCheckoutInformation();
-    CheckoutPage.getContinueCheckoutButton().click();
-    CheckoutPage.getFinishCheckoutButton().click();
+    CheckoutPage.clickContinueCheckoutButton();
+    CheckoutPage.clickFinishCheckoutButton();
     expect(
       CheckoutPage.getCompleteCheckoutHeader().contains(
         'THANK YOU FOR YOUR ORDER'

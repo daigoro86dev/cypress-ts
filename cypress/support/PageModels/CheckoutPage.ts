@@ -64,6 +64,24 @@ class CheckoutPage {
     this.getLastNameInput().type(User.getLastName());
     this.getPostalCodeInput().type(User.getPostalCode());
   }
+  /**
+   * @method clickCheckoutButton
+   */
+  clickCheckoutButton() {
+    this.getCheckoutButton().click();
+  }
+  /**
+   * @method clickContinueCheckoutButton
+   */
+  clickContinueCheckoutButton() {
+    this.getContinueCheckoutButton().click();
+  }
+  /**
+   * @method clickFinishCheckoutButton
+   */
+  clickFinishCheckoutButton() {
+    this.getFinishCheckoutButton().click();
+  }
 }
 
 export default new CheckoutPage();

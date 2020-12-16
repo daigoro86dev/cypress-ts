@@ -45,6 +45,12 @@ class NavigationBar {
   getNavbarCartLink() {
     return cy.get('#shopping_cart_container a');
   }
+  /**
+   * @method navigateToCheckout
+   */
+  navigateToCheckout() {
+    this.getNavbarCartLink().click();
+  }
 }
 
 export default new NavigationBar();

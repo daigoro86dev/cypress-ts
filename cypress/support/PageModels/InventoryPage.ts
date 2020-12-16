@@ -26,6 +26,13 @@ class InventoryPage {
       cy.fetchImage(img);
     });
   }
+  /**
+   * @method selectItemByName
+   * @param itemName
+   */
+  selectItemByName(itenName: string) {
+    this.getItemByName(itenName).click();
+  }
 }
 
 export default new InventoryPage();

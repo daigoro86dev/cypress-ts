@@ -33,6 +33,12 @@ class InventoryItemPage {
   getInventoryDetailsBackButton() {
     return cy.get('.inventory_details_back_button');
   }
+  /**
+   * @method addItemToCart
+   */
+  addItemToCart() {
+    this.getAddToCartButton().click();
+  }
 }
 
 export default new InventoryItemPage();
