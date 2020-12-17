@@ -1,4 +1,5 @@
 {
+  "projectId": "sltspoc1",
   "baseUrl": "https://www.saucedemo.com",
   "watchForFileChanges": false,
   "numTestsKeptInMemory": 0,
