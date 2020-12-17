@@ -5,6 +5,7 @@
  */
 
 import webpack from '@cypress/webpack-preprocessor';
+import 'cypress-mochawesome-reporter/register';
 
 module.exports = (on: any) => {
   const options = {

@@ -112,3 +112,6 @@ dist
 # Cypress Media Folders
 cypress/videos
 cypress/screenshots
+# Reports and results
+cypress/reports
+cypress/results

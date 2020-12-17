@@ -7,6 +7,6 @@ declare namespace Cypress {
      * @function fetchImage
      * @param img
      */
-    fetchImage(img: any): Chainable<Element>;
+    fetchImage(img: any): void;
   }
 }
