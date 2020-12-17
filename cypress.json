@@ -5,6 +5,5 @@
   "video": false,
   "screenshotOnRunFailure": false,
   "pluginsFile": "cypress/plugins/index.ts",
-  "supportFile": "cypress/support/index.ts",
-  "reporter": "cypress-mochawesome-reporter"
+  "supportFile": "cypress/support/index.ts"
 }
