@@ -3,7 +3,8 @@
     "target": "es5",
     "lib": ["es5", "dom"],
     "types": ["cypress"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "."
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "cypress/plugins/index.js"]
 }

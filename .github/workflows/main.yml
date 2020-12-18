@@ -17,6 +17,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           record: true
+          key: ${{ secrets.CYPRESS_RECORD_KEY }}
           parallel: true
           group: 'Actions'
         env:
