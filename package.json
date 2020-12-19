@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "cy:run": "cypress run --browser chrome --headless",
-    "cy:open": "cypress open",
-    "cy:report": "generate-mochawesome-report"
+    "cy:open": "cypress open"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.5.0",
